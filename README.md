@@ -1,73 +1,107 @@
-# Welcome to your Lovable project
+Name : Pasupuleti Tiru ganesh
 
-## Project info
+college name: Vignan's lara institute of technology and science
 
-**URL**: https://lovable.dev/projects/ebff1a88-a57f-4001-acf8-7c816c352dd4
+contact number : 9121556689
 
-## How can I edit this code?
+# Employee Attendance System
 
-There are several ways of editing your application.
+Full-stack Employee Attendance System with roles **Employee** and **Manager**.
 
-**Use Lovable**
+## Tech Stack
+- Frontend: React + Redux Toolkit + Tailwind CSS (Vite recommended)
+- Backend: Node.js + Express
+- Database: MongoDB (Mongoose)
+- Auth: JWT
+- Other: CSV export, Seed script
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ebff1a88-a57f-4001-acf8-7c816c352dd4) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## Repo layout
+(See project root layout in the repo)
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Quick Setup (Local)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Prerequisites
+- Node.js (v18+)
+- npm or pnpm
+- MongoDB running locally or MongoDB Atlas connection string
 
-Follow these steps:
+### 1) Backend Setup
+```bash
+**# open terminal in backend/
+cd backend
+cp .env.example .env
+# update .env with real values
+npm install
+npm run seed        # seed sample users and attendance (creates sample data)
+npm run dev         # starts server on PORT (default 5000)
+# open terminal in frontend/
+cd frontend
+cp .env.example .env
+npm install
+npm run dev         # default port 5173 (Vite) or 3000 for CRA
+**
+# open terminal in frontend/
+cd frontend
+cp .env.example .env
+npm install
+npm run dev         # default port 5173 (Vite) or 3000 for CRA
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+environmental variables
+PORT=5000
+MONGO_URI=mongodb://localhost:27017/attendance_db
+JWT_SECRET=your_jwt_secret_here
+JWT_EXPIRES_IN=7d
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+frontend.env
+VITE_API_URL=http://localhost:5000/api
 
-# Step 3: Install the necessary dependencies.
-npm i
+Seed data
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Run npm run seed in backend/. Seed creates:
 
-**Edit a file directly in GitHub**
+Manager: manager@company.com / Password: Password123
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Employee: alice@company.com / Password: Password123
 
-**Use GitHub Codespaces**
+Employee: bob@company.com / Password: Password123
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Sample attendance records for the current month
 
-## What technologies are used for this project?
 
-This project is built with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
+How to use
 
-Simply open [Lovable](https://lovable.dev/projects/ebff1a88-a57f-4001-acf8-7c816c352dd4) and click on Share -> Publish.
+Register (employee) or login (manager using seeded credentials)
 
-## Can I connect a custom domain to my Lovable project?
+Employee can Check-in and Check-out
 
-Yes, you can!
+Manager can view team attendance, filter, and export CSV
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+---
+
+Scripts
+
+Backend package.json scripts:
+
+npm run dev — run with nodemon
+
+npm run start — production start
+
+npm run seed — run seed script
+
+
+Frontend package.json scripts:
+
+npm run dev — start dev server
+
+npm run build — build for production
+
+npm run preview — preview build
