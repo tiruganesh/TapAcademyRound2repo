@@ -1,104 +1,73 @@
-Name: Pasupuleti tiru ganesh
+# Welcome to your Lovable project
 
-College: Vignan's Lara institute of technology & science
+## Project info
 
-Contact Number: 9121556689
+**URL**: https://lovable.dev/projects/ebff1a88-a57f-4001-acf8-7c816c352dd4
 
-# Employee Attendance System
+## How can I edit this code?
 
-Full-stack Employee Attendance System with roles *Employee* and *Manager*.
+There are several ways of editing your application.
 
-## Tech Stack
-- Frontend: React + Redux Toolkit + Tailwind CSS (Vite recommended)
-- Backend: Node.js + Express
-- Database: MongoDB (Mongoose)
-- Auth: JWT
-- Other: CSV export, Seed script
+**Use Lovable**
 
----
+Simply visit the [Lovable Project](https://lovable.dev/projects/ebff1a88-a57f-4001-acf8-7c816c352dd4) and start prompting.
 
-## Repo layout
-(See project root layout in the repo)
+Changes made via Lovable will be committed automatically to this repo.
 
----
+**Use your preferred IDE**
 
-## Quick Setup (Local)
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
 
-### Prerequisites
-- Node.js (v18+)
-- npm or pnpm
-- MongoDB running locally or MongoDB Atlas connection string
+The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-### 1) Backend Setup
-# open terminal in backend
-cd backend
-cp .env.example .env
-# update .env with real values
-npm install
-npm run seed       
+Follow these steps:
+
+```sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone <YOUR_GIT_URL>
+
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
+
+# Step 3: Install the necessary dependencies.
+npm i
+
+# Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
+```
 
+**Edit a file directly in GitHub**
 
-### 2) Front setup
-# open terminal in frontend/
-cd frontend
-cp .env.example .env
-npm install
-npm run dev
+- Navigate to the desired file(s).
+- Click the "Edit" button (pencil icon) at the top right of the file view.
+- Make your changes and commit the changes.
 
-##Environments variables
+**Use GitHub Codespaces**
 
-Backend .env(example in .env.example)
-example : PORT=5000
-MONGO_URI=mongodb://localhost:27017/attendance_db
-JWT_SECRET=your_jwt_secret_here
-JWT_EXPIRES_IN=7d
+- Navigate to the main page of your repository.
+- Click on the "Code" button (green button) near the top right.
+- Select the "Codespaces" tab.
+- Click on "New codespace" to launch a new Codespace environment.
+- Edit files directly within the Codespace and commit and push your changes once you're done.
 
-##Frontend .env
+## What technologies are used for this project?
 
-example : VITE_API_URL=http://localhost:5000/api
+This project is built with:
 
-Seed data
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
 
-Run npm run seed in backend/. Seed creates:
+## How can I deploy this project?
 
-Manager: manager@company.com / Password: Password123
+Simply open [Lovable](https://lovable.dev/projects/ebff1a88-a57f-4001-acf8-7c816c352dd4) and click on Share -> Publish.
 
-Employee: alice@company.com / Password: Password123
+## Can I connect a custom domain to my Lovable project?
 
-Employee: bob@company.com / Password: Password123
+Yes, you can!
 
-Sample attendance records for the current month
+To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
-
-
----
-
-How to use
-
-Register (employee) or login (manager using seeded credentials)
-
-Employee can Check-in and Check-out
-
-Manager can view team attendance, filter, and export CSV
-
----
-
-Scripts
-
-Backend package.json scripts:
-
-npm run dev — run with nodemon
-
-npm run start — production start
-
-npm run seed — run seed script
-
-Frontend package.json scripts:
-
-npm run dev — start dev server
-
-npm run build — build for production
-
-npm run preview — preview build
-
+Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
